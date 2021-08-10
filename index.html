@@ -1,0 +1,348 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <title>Arthur Nyaniso Butler Personal Website</title>
+    <link rel="icon" href="ArthurButlerHeadshot.jpg" />
+    <link rel="stylesheet" type="text/css"   href="style/game.css">
+    <link rel="stylesheet" type="text/css"   href="style/style.css">
+    <link rel="stylesheet" type="text/css"   href="slide.css">
+    <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        alert("grecaptcha is ready!");
+      };
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/58201b45f9eabe607057a45bb/02370d8b2a00b59cc9c4572cd.js");</script>
+  </head>
+  <body onLoad="load()">
+    <canvas id="game-canvas" class="gameCanvas"></canvas>
+    <div class="navbar">
+      <ul>
+        <li class="item" onClick="Animate()">
+          <a class="btn" href="#About Me">About Me</a>
+        </li>
+        <li class="item">
+          <a class="btn" href="#Certificates">Certificates</a>
+        </li>
+        <li class="item">
+          <a class="btn" href="#Skills">Skills</a>
+        </li>
+        <li class="item">
+          <a class="btn" href="#Contact">Contact</a>
+        </li>
+      </ul>
+    </div>  
+    <button class="sideBtn"  onclick="Summon()">></button>
+    <div class="sidenav">
+      <h3>Socials:</h3>
+      <a class="sideOps" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BBRN3pTHaRSaTFfXwur5Pkg%3D%3D">LinkedIn</a>
+      <a class="sideOps" href="https://www.instagram.com/anyaniso2001/">Instagram</a>
+      <br/>
+      <br/>
+      <br/>
+      <h3>Projects:</h3>
+      <a class="sideOps" href="https://github.com/CPTWEX012">Github</a>
+      <a class="sideOps" href="https://padlet.com/interncptwex012/kytmkox2mmn0">Padlet</a>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <button class="closeBtn"  onclick="Summon()"><</button>
+    </div>
+    <div class="header">
+          <center>
+            <img class="image" src="images/ArthurButlerHeadshot.jpg" alt="Headshot" />
+          </center>
+          <center>
+            <div class="heading">
+              <h1>Arthur Nyaniso Butler</h1>
+              <h1>Backend Python Developer</h1>
+            </div>
+          </center>
+          <div class="space"></div>
+          <center><button class="swipe">SWIPE UP</button></center>
+        </div>
+    </div>
+    
+    <div class="About-me" id="About Me">
+      <center>
+        <h2><mark>About Me</mark></h2>
+      </center>
+      <div class="assets">
+        <img class="AboutPic" src="images/ArthurPic.jpg">
+        <center>
+          <p class="passage">
+            Good day my name is Arthur. I am a hard working, diligent individual
+            that strives to complete tasks to the best of my ability. I have
+            always loved complexed logical problems that I can muse over and
+            solve. My interests are emerging technologies such as ray tracing,
+            quantum supremacy, VR, AI and micro-computing. I am also an avid chess
+            player. My love for chess stems from the different strategies you can
+            utilize to either attack or protect against your opponent and the fact
+            that it is problem solving at it's finest. My goal is to become a
+            Senior Python back-end or fullstack developer.
+          </p>
+       </center>
+      </div>
+    </div>
+    <div class="Certificates" id="Certificates">
+      <center>
+        <h2><mark>Certificates</mark></h2>
+        <p class="passage">Below is a slideshow of the various certifications I have aquired throughout my five 
+          years of acquired expereince in the feild of IT and Computer Science. Certifications include diplomas for Python,
+          Javascript, HTML and CSS and SQL.
+        </p> 
+          <section id="slider">
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="sl ider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
+            <label for="s1" id="slide1">CV(1)</label>
+            <label for="s2" id="slide2">Udemy Javascript Certificate</label>
+            <label for="s3" id="slide3">Microsoft Python Certification</label>
+            <label for="s4" id="slide4">Udemy HTML CSS Certificate</label>
+            <label for="s5" id="slide5">Udemy Python Certificate</label>
+          </section>
+      </center>
+    </div>
+    <div class="Skills" id="Skills">
+      <center><h2><mark>Skills</mark></h2></center>
+      <div class="grid-container">
+        <div class="grid-item item1">
+          <center>Python</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/python.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: high <br/> 2 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item2">
+          <center>CSS and HTML</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/html.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: high  <br/>  5 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item3">
+          <center>Javascript</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/javascript.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: high  <br/>  4 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item4">
+          <center>
+            Video Editing
+          </center>
+          <center>
+            <img
+              class="skill-image"
+              src="https://image.flaticon.com/icons/png/512/2886/2886890.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: medium  <br/>  6 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item5">
+          <center>SQL</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/sql.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: high  <br/>  5 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item6">
+          <center>Typescript</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/typescript.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: medium  <br/>  2 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item7">
+          <center>Delphi</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/Delphi.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: high <br/>  5 years of experience</p>
+          </center>
+        </div>
+        <div class="grid-item item8">
+          <center>C#</center>
+          <center>
+            <img
+              class="skill-image"
+              src="images/C.png"
+              alt="Headshot"
+            />
+            <p class="skill-info hidden">Skill level: medium  <br/>  1 years of experience</p>
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class="Contact "id="Contact"> 
+      <center><h2><mark>Contact Me</mark></h2></center>
+      <div class="form">
+        <center>
+          <p class="con-info">Phone Number: 0658422435<br/><br/>
+        Email Address: arthur.butler@younglings.africa</p>
+        </center>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+        <center>
+        <h3>Send email to me:</h3>
+        <label class="lbl" for="email">Email:  </label>
+        <input type="text" class="email" placeholder="Email"><br>
+        <br><br>
+        <label class="lbl" for="subject">Subject:  </label>
+        <input type="text" class="subject" placeholder="Subject"><br>
+        <br><br>
+        <label class="lbl" for="lname">Message:  </label>
+        <textarea type="text" class="inputMessage" placeholder="Message"></textarea>
+        <br>
+        <div class="g-recaptcha" data-sitekey="6LdIhO8bAAAAAL1s30IsJ9U5_HM8Bbb3OeobkD4J"></div>
+        <br>
+        <center><button onClick=Send()>Submit</button></center>
+        </center>
+      </div><!--data-action='submit'-->
+    </div>
+    <canvas id="c"></canvas>
+    <script>
+      const config = {
+        apiKey: "AIzaSyCJb94NbuP2JfuiVI_odmkrOl59wUzW8K4",
+        authDomain: "purchaseform-fa506.firebaseapp.com",
+        projectId: "purchaseform-fa506",
+        storageBucket: "purchaseform-fa506.appspot.com",
+        messagingSenderId: "8998117663",
+        appId: "1:8998117663:web:0e1070e8a6dbeeef08d02a",
+        measurementId: "G-KBCW6HSPVV"
+      };
+
+      function onSubmit(token) {
+        document.getElementByClass("g-recaptcha").submit();
+      }
+
+      function sendEmail(email, subject, message) {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "arthurbutler1738@gmail.com",
+          Password: "102030_art",
+          To: 'arthur.butler@younglings.africa',
+          From: "arthurbutler1738@gmail.com",
+          Subject: `${email}:${subject}`,
+          Body: message,
+        })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+      }
+
+      function stringParse(email, subject, message){
+        var swearArr=["fuck","shit","poes","tranny","chink","dyke","faggot","nigg","kike","kaffer","cunt","tief","moffie","whore","hoer","etter","fok","hotnot","naai","kafer"];
+        var correct = 0;
+        var incorrect = 0;
+        for (let i = 0; i < email.length; i++) {  
+          if (email.charAt(i)=="@") {
+             correct+=1;
+          }
+          if (email.charAt(i)==".") {
+             correct+=1;
+          }
+        }
+
+        for (let i = 0; i < subject.length; i++) {
+          for (let x = 0; x < swearArr.length; x++) {
+             if (subject.substring(i,i+(swearArr[x].length))==swearArr[x]){
+                incorrect+=1;
+             }
+          }
+        }
+
+        for (let i = 0; i < message.length; i++) {
+          for (let x = 0; x < swearArr.length; x++) {
+             if (message.substring(i,i+(swearArr[x].length))==swearArr[x]){
+                incorrect+=1;
+             }
+          }
+        }
+
+        if (incorrect>0) {
+          document.querySelector(".subject").value="";
+          document.querySelector(".inputMessage").value="";
+          alert("Slurs and harsh language were used in message or subject inputs or both!!");
+          return false;
+        }
+       
+        if (correct>=2){
+           alert("Valid Email Address!!");
+           return true;
+        } else {
+          document.querySelector(".email").value="";
+          alert("Invalid Email Address!!");
+          return false;
+        }
+      }
+
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      const appCheck = firebase.appCheck();
+      appCheck.activate('abcdefghijklmnopqrstuvwxy-1234567890abcd');
+      function Send(){
+        Vemail = document.querySelector(".email").value;
+        Vsubject = document.querySelector(".subject").value;
+        Vmessage = document.querySelector(".inputMessage").value;
+        if(stringParse(Vemail,Vsubject,Vmessage)==false){
+           return;
+        };
+        sendEmail(Vemail,Vsubject,Vmessage);
+        db.collection('Visitors').doc('Visitor').set({
+          email: Vemail,
+          subject:Vsubject,
+          message: Vmessage,
+        }, { merge: true }).then(() => {
+            alert("Document successfully written!");
+        })
+        .catch((error) => {
+            alert("Error writing document: ", error);
+        });
+      };
+    </script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/backgroundAnimation.js"></script>
+  </body>
+</html>
