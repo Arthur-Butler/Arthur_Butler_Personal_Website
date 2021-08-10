@@ -47,7 +47,8 @@ html {
 }
 
 .button:hover{
-  backgound-color:gray;
+  backgound-color:grey;
+  color:black;
 }
 
 h1 {
