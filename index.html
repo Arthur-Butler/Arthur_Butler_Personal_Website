@@ -250,25 +250,24 @@
         messagingSenderId: "8998117663",
         appId: "1:8998117663:web:0e1070e8a6dbeeef08d02a",
         measurementId: "G-KBCW6HSPVV"
-      };
+      }
 
       function onSubmit(token) {
         document.getElementByClass("g-recaptcha").submit();
       }
 
-      function sendEmail(email, subject, message) {
+      function sendEmail(email, subject, emessage) {
         Email.send({
           Host: "smtp.gmail.com",
           Username: "arthurbutler1738@gmail.com",
-          Password: "102030_art",
+          Password: "VtYTN7gq-Aj6N_6",
           To: 'arthur.butler@younglings.africa',
           From: "arthurbutler1738@gmail.com",
           Subject: `${email}:${subject}`,
-          Body: message,
-        })
-        .then(function (message) {
-          alert("mail sent successfully")
-        });
+          Body: emessage,
+        }).then(
+          message => alert(message)
+        );
       }
 
       function stringParse(email, subject, message){
