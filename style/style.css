@@ -46,6 +46,10 @@ html {
   text-decoration: none;
 }
 
+.button:hover{
+  backgound-color:gray;
+}
+
 h1 {
   margin: 0;
   font-family: Impact;
